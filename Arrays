@@ -1,0 +1,43 @@
+Q1)Two Sum problem of leetcode(brute code)
+Ans :- class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target)
+    {   vector <int> index;
+        int n=nums.size();
+        for(int i=0;i<n;i++)
+        {
+            for(int  j=i+1;j<n;j++)
+            {
+                if(nums[i]+nums[j]==target)
+                {
+                    
+                    index.push_back(i);index.push_back(j);
+
+                }
+            }
+        }
+        return index;
+    }
+};
+
+q2)Remove element of leetcode(brute code)
+ans :- class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        
+        vector<int> temp;
+        for(int i=0;i<nums.size();i++)
+        {
+            if(nums[i]!=val)
+            {
+                temp.push_back(nums[i]);
+            }
+        }
+        nums.clear();
+        for(int i=0;i<temp.size();i++)
+        {
+            nums.push_back(temp[i]);
+        }
+      return temp.size();  
+    }
+};
